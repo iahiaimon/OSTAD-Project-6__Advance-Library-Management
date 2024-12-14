@@ -1,5 +1,4 @@
 
-
 def search_book(all_book):
     name = input("Enter the name or the ISBN nunber of the book... ").title()
     
@@ -13,6 +12,6 @@ def search_book(all_book):
             break
     
     if not book_found:
-        print(f"The book {name} is not found in the library")
+        print(f"\nThe book {name} is not found in the library")
     
     return all_book

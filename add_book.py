@@ -1,5 +1,6 @@
 import datetime
 from save_all_book import save_all_book
+import random , math
 
 
 def add_book(all_book):
@@ -25,8 +26,13 @@ def add_book(all_book):
                 print("Invalid input! ISBN must be a numeric value. Please try again ")
                 continue
 
+            # isbn = random.randint(1000 , 50000)
+            # print(f"\nThe ISBN number is {isbn}")
+            
             if any(book['isbn'] == isbn for book in all_book):
                 print(f"\nThe book '{name}' is already in your library ")
+                print(f"\nGenerating a new ISBN number...")
+                isbn = random.randint(1000 , 50000)
                 return all_book
             break
 
